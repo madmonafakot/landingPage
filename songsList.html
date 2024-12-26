@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>רשימת שירים</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            direction: rtl; /* עיצוב מימין לשמאל */
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            height: 70%; /* גובה הפופ-אפ מוגדר ל-70% מגובה העמוד */
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            z-index: 1000;
+            overflow-y: auto; /* סרגל גלילה מופיע אם התוכן חורג מהגובה */
+        }
+        .popup h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .popup p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .popup button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .show {
+            display: block;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 36px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .buttons-container {
+            margin-top: 20px;
+        }
+
+        .load-button {
+            background-color: #ff6347;
+            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin: 0 10px;
+        }
+
+        .load-button:hover {
+            background-color: #e5533f;
+        }
+
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 40px;
+            width: 50%; /* הגדרת רוחב הרשימה ל-50% */
+            margin: 0 auto; /* ממרכז את הרשימה */
+        }
+
+        .song-item {
+            display: flex;
+            justify-content: flex-start; /* מיישר את התוכן מימין לשמאל */
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .song-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .song-info {
+            flex: 1;
+            text-align: right; /* טקסט מיושר לימין */
+        }
+
+        .song-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+        }
+
+        .song-description {
+            font-size: 14px;
+            color: #777;
+            display: none; /* Initially hidden */
+            margin-top: 10px;
+        }
+
+        .play-button, .seek-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #1E90FF;
+            cursor: pointer;
+        }
+
+        .toggle-description {
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: #ff6347;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            width: 150px;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            color: #333;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* סגנון כפתור הרצה אחורה וקדימה */
+        .seek-button {
+            font-size: 18px;
+            color: #1E90FF;
+        }
+
+        /* הסגנון של כפתור המשולש */
+        .toggle-description i {
+            font-size: 18px;
+        }
+
+       /* אפקט הגדלה עדינה */
+        .play-button i {
+            transition: transform 0.2s ease; /* מעבר עדין */
+        }
+
+        .play-button i:active {
+            transform: scale(1.1); /* הגדלה קלה בזמן לחיצה */
+        }
+
+        .play-button i.playing {
+            animation: bounce 0.4s ease; /* אנימציית קפיצה עדינה */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px); /* קפיצה קטנה */
+            }
+        }
+
+        .version-filter {
+            display: flex;
+            justify-content: center; /* מרכז את הכפתורים */
+            margin: 20px auto;
+            width: 50%; /* הרוחב יתאים לרוחב הרשימה */
+        }
+
+        .filter-button {
+            flex: 1; /* הכפתורים יחלקו את הרוחב ביניהם שווה */
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            padding: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border-radius: 5px;
+            margin: 0 5px; /* רווח קטן בין הכפתורים */
+        }
+
+        .filter-button:hover {
+            background-color: #147ad6;
+            transform: scale(1.02);
+        }
+
+        .filter-button.selected {
+            background-color: #0b5394; /* כפתור נבחר */
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>רשימת השירים</h1>
+
+<div class="buttons-container">
+    <button id="loadFromFileBtn" class="load-button">טען מקובץ מקומי</button>
+    <button id="loadFromURLBtn" class="load-button">טען מקובץ ברשת</button>
+</div>
+
+<input type="file" id="csvFile" accept=".csv" style="display: none;" />
+
+<div id="versionFilter" class="version-filter">
+    <button id="girlsVersion" class="filter-button selected">גרסת בנות</button>
+    <button id="boysVersion" class="filter-button">גרסת בנים</button>
+</div>
+
+
+<ul id="songs" class="song-list">
+    <!-- השירים יוצגו כאן -->
+</ul>
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <h2>מילות השיר</h2>
+    <p id="lyricsContent"></p>
+    <button onclick="closePopup()">סגור</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+<script>
+    // אובייקט כדי לשמור את השירים שמנוגנים
+    let currentAudio = null;
+    let currentDescription = null; // תיאור פתוח כרגע
+
+    // פונקציה להוסיף שיר לרשימה
+    function createSongItem(song, index) {
+        const songItem = document.createElement("li");
+        songItem.classList.add("song-item");
+        songItem.setAttribute("name", "song-item-" + index); // הוספת פרמטר name עם אינדקס
+
+        const songInfo = document.createElement("div");
+        songInfo.classList.add("song-info");
+        songInfo.setAttribute("name", "song-info-" + index); // הוספת פרמטר name עם אינדקס
+	
+	 const lyricsButton = document.createElement("button");
+        lyricsButton.textContent = "מילים";
+        lyricsButton.onclick = function () {
+            openPopup(song.words);
+        };
+
+        const toggleDescriptionButton = document.createElement("button");
+        toggleDescriptionButton.classList.add("toggle-description");
+        toggleDescriptionButton.setAttribute("name", "toggle-description-" + index); // הוספת פרמטר name עם אינדקס
+        toggleDescriptionButton.innerHTML = '<i class="fas fa-chevron-left"></i> <div class="song-name" name="song-name-' + index + '" > ' + song.name + '</div>';
+        toggleDescriptionButton.onclick = function () {
+            const description = songItem.querySelector('[name^="song-description"]');
+            const icon = toggleDescriptionButton.querySelector("i");
+
+            // סגירת התיאור הקודם אם קיים
+            if (currentDescription && currentDescription !== description) {
+                currentDescription.style.display = "none";
+                const prevIcon = document.querySelector(".toggle-description i.fa-chevron-down");
+                if (prevIcon) prevIcon.className = "fas fa-chevron-left";
+            }
+
+            // פתיחה/סגירה של התיאור הנוכחי
+            if (description.style.display === "none") {
+                description.style.display = "block";
+                icon.className = "fas fa-chevron-down";
+                currentDescription = description;
+            } else {
+                description.style.display = "none";
+                icon.className = "fas fa-chevron-left";
+                currentDescription = null;
+            }
+        };
+
+        const songDescription = document.createElement("div");
+        songDescription.classList.add("song-description");
+        songDescription.setAttribute("name", "song-description-" + index); // הוספת פרמטר name עם אינדקס
+        songDescription.textContent = song.description;
+        songDescription.style.display = "none";
+
+        const playButton = document.createElement("button");
+        playButton.classList.add("play-button");
+        playButton.setAttribute("name", "play-button-" + index); // הוספת פרמטר name עם אינדקס
+        playButton.innerHTML = '<i class="fas fa-play"></i>'; // כפתור הפעלה (משולש)
+	
+        playButton.onclick = function () {
+        // אם יש שיר מנוגן, נעצור אותו
+        if (currentAudio && !currentAudio.paused) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0; // חזרה להתחלה
+            if (currentSongItem) {
+                const prevPlayButton = currentSongItem.querySelector('[name^="play-button"]');
+                prevPlayButton.classList.remove("playing");
+                prevPlayButton.innerHTML = '<i class="fas fa-play"></i>';
+                currentSongItem.querySelector('[name^="seek-backward-button"]').style.display = 'none';
+                currentSongItem.querySelector('[name^="seek-forward-button"]').style.display = 'none';
+            }
+        }
+
+        // אם השיר לא מנוגן, ננגן אותו
+        if (currentAudio !== song.audio) {
+            currentAudio = song.audio;
+            currentAudio.play();
+            playButton.innerHTML = '<i class="fas playing fa-pause"></i>'; // משנה לאייקון של הפסקה
+	    currentSongItem = songItem;
+            currentSongItem.querySelector('[name^="seek-backward-button"]').style.display = 'inline-block';
+            currentSongItem.querySelector('[name^="seek-forward-button"]').style.display = 'inline-block';
+        } else {
+            // עצירת השיר
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            playButton.innerHTML = '<i class="fas playing fa-play"></i>'; // משנה למשולש
+            currentSongItem.querySelector('[name^="seek-backward-button"]').style.display = 'none';
+            currentSongItem.querySelector('[name^="seek-forward-button"]').style.display = 'none';
+            currentSongItem = null;
+            currentAudio = null;
+        }
+    };
+
+        // כפתור הרצה אחורה
+        const seekBackwardButton = document.createElement("button");
+        seekBackwardButton.classList.add("seek-button");
+        seekBackwardButton.setAttribute("name", "seek-backward-button-" + index); // הוספת פרמטר name עם אינדקס
+        seekBackwardButton.innerHTML = '<i class="fas fa-forward"></i>';
+        seekBackwardButton.style.display = 'none'; // כפתור זה לא יופיע עד שהשיר יתחיל להתנגן
+        seekBackwardButton.onclick = function() {
+            if (currentAudio.currentTime > 10) {
+                currentAudio.currentTime -= 10; // הרצה אחורה ב-10 שניות
+            } else {
+                currentAudio.currentTime = 0; // לא נרצה להגיע לזמן שלילי
+            }
+        };
+
+        // כפתור הרצה קדימה
+        const seekForwardButton = document.createElement("button");
+        seekForwardButton.classList.add("seek-button");
+        seekForwardButton.setAttribute("name", "seek-forward-button-" + index); // הוספת פרמטר name עם אינדקס
+        seekForwardButton.innerHTML = '<i class="fas fa-backward"></i>';
+        seekForwardButton.style.display = 'none'; // כפתור זה לא יופיע עד שהשיר יתחיל להתנגן
+        seekForwardButton.onclick = function() {
+            currentAudio.currentTime += 10; // הרצה קדימה ב-10 שניות
+        };
+
+        // הוספת כל האלמנטים
+        songInfo.appendChild(toggleDescriptionButton);
+        //songInfo.appendChild(songName);
+        songItem.appendChild(songInfo);
+        songItem.appendChild(seekBackwardButton);
+        songItem.appendChild(playButton);
+        songItem.appendChild(seekForwardButton);
+        songInfo.appendChild(songDescription);
+	    songDescription.appendChild(lyricsButton);
+
+        document.getElementById("songs").appendChild(songItem);
+    }
+
+    // פונקציה לסינון הרשימה לפי הגרסה
+function filterSongs(version) {
+    const songsList = document.getElementById("songs");
+    songsList.innerHTML = ""; // ניקוי הרשימה
+
+    // סינון השירים לפי ה-VERSION והוספתם לרשימה
+    const filteredSongs = allSongs.filter(song => song.version === version);
+    filteredSongs.forEach(createSongItem);
+}
+
+// פונקציה לעדכון מצב הכפתורים
+function updateButtonSelection(selectedButtonId) {
+    document.querySelectorAll('.filter-button').forEach(button => {
+        button.classList.remove('selected'); // הסרת המצב הנבחר מכל הכפתורים
+    });
+
+    document.getElementById(selectedButtonId).classList.add('selected'); // הוספת המצב הנבחר לכפתור המתאים
+}
+
+// הוספת מאזינים לכפתורי הסינון
+document.getElementById("girlsVersion").addEventListener("click", function() {
+    updateButtonSelection("girlsVersion");
+    if (currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }  
+    filterSongs("בנות");
+});
+
+document.getElementById("boysVersion").addEventListener("click", function() {
+    updateButtonSelection("boysVersion");
+    if (currentAudio){
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }  
+    filterSongs("בנים");
+});
+
+    function openPopup(lyrics) {
+        document.getElementById("lyricsContent").innerHTML = lyrics;
+        document.getElementById("popup").classList.add("show");
+        document.getElementById("overlay").classList.add("show");
+    }
+
+    function closePopup() {
+        document.getElementById("popup").classList.remove("show");
+        document.getElementById("overlay").classList.remove("show");
+    }
+
+    function convertToDirectLink(sharedLink) {
+    const regex = /https:\/\/drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)\/view/;
+    const match = sharedLink?.match(regex);
+
+    if (match && match[1]) {
+        const fileId = match[1];
+        return `https://docs.google.com/uc?export=preview&id=${fileId}`;
+    } else {
+        return sharedLink;
+    }
+}
+
+    // עדכון הפונקציה לקריאת קבצים
+        function loadFromFile(file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const contents = event.target.result;
+                Papa.parse(contents, {
+                    header: true,
+                    complete: function(results) {
+                        allSongs = results.data.map(song => ({
+                            ...song,
+                            audio: new Audio(convertToDirectLink(song.link))
+                        }));
+                        filterSongs("בנות"); // ברירת מחדל - הצגת גרסת בנות
+                        updateButtonSelection("girlsVersion");
+                    }
+                });
+            };
+            reader.readAsText(file);
+        }
+
+        function loadFromURL(url) {
+            Papa.parse(url, {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    allSongs = results.data.map(song => ({
+                        ...song,
+                        audio: new Audio(convertToDirectLink(song.link))
+                    }));
+                    filterSongs("בנות"); // ברירת מחדל - הצגת גרסת בנות
+                    updateButtonSelection("girlsVersion");
+                }
+            });
+        }
+
+    // מאזינים לכפתורים
+    document.getElementById("loadFromFileBtn").addEventListener("click", function() {
+        document.getElementById("csvFile").click();
+    });
+
+    document.getElementById("csvFile").addEventListener("change", function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            loadFromFile(file);
+        }
+    });
+
+    document.getElementById("loadFromURLBtn").addEventListener("click", function() {
+        const csvUrl = prompt("הכנס את כתובת ה-URL של קובץ ה-CSV:");
+        if (csvUrl) {
+            loadFromURL(csvUrl);
+        }
+    });
+</script>
+
+</body>
+</html>
