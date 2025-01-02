@@ -227,10 +227,10 @@
 
 <h1>רשימת השירים</h1>
 
-<div class="buttons-container">
+<!-- <div class="buttons-container">
     <button id="loadFromFileBtn" class="load-button">טען מקובץ מקומי</button>
     <button id="loadFromURLBtn" class="load-button">טען מקובץ ברשת</button>
-</div>
+</div> -->
 
 <input type="file" id="csvFile" accept=".csv" style="display: none;" />
 
@@ -480,24 +480,27 @@ document.getElementById("boysVersion").addEventListener("click", function() {
             });
         }
 
-    // מאזינים לכפתורים
-    document.getElementById("loadFromFileBtn").addEventListener("click", function() {
-        document.getElementById("csvFile").click();
-    });
+    // // מאזינים לכפתורים
+    // document.getElementById("loadFromFileBtn").addEventListener("click", function() {
+    //     document.getElementById("csvFile").click();
+    // });
 
-    document.getElementById("csvFile").addEventListener("change", function(event) {
-        const file = event.target.files[0];
-        if (file) {
-            loadFromFile(file);
-        }
-    });
+    // document.getElementById("csvFile").addEventListener("change", function(event) {
+    //     const file = event.target.files[0];
+    //     if (file) {
+    //         loadFromFile(file);
+    //     }
+    // });
 
-    document.getElementById("loadFromURLBtn").addEventListener("click", function() {
-        const csvUrl = prompt("הכנס את כתובת ה-URL של קובץ ה-CSV:");
-        if (csvUrl) {
-            loadFromURL(csvUrl);
-        }
-    });
+    // document.getElementById("loadFromURLBtn").addEventListener("click", function() {
+    //     const csvUrl = prompt("הכנס את כתובת ה-URL של קובץ ה-CSV:");
+    //     if (csvUrl) {
+    //         loadFromURL(csvUrl);
+    //     }
+    // });
+
+    loadFromURL("https://raw.githubusercontent.com/madmonafakot/landingPage/refs/heads/main/%D7%A9%D7%99%D7%A8%D7%99%D7%9D-%D7%99%D7%A6%D7%95%D7%90%20%D7%9C%D7%93%D7%A3%20%D7%A0%D7%97%D7%99%D7%AA%D7%94.csv");
+
 </script>
 
 </body>
