@@ -1,5 +1,10 @@
-﻿שם+גרסה,name,version,description,link,מחיר,words
-שיר סידור קצבי - בנים,שיר סידור קצבי,בנים,"שיר סידור קצבי למסיבת הסידור שלכם! השיר כולל מקצבים אנרגטיים, מילים קליטות וקצב תוסס. השיר מוצלח ביותר עבור בנים ואידיאלי ליצירת אווירה חגיגית, שמחה נרגשת ומבטיח השתתפות של כולם.",https://drive.google.com/file/d/1Itr-rTGBCrIFh-ngPgWnHI0o5aT10QOr/view?usp=drive_link,,"<p><strong>שִׁיר סִדּוּר</strong></p>
+﻿name,description,link,wordsFile,words,category
+נגילה בנים ,"שיר סידור קצבי למסיבת סידור <br>
+ השיר כולל מקצבים אנרגטיים,<br>
+ מילים קליטות וקצב תוסס.<br>
+ השיר מוצלח ביותר עבור בנים <br>
+ אידיאלי ליצירת אווירה חגיגית, שמחה נרגשת<br>
+ ומבטיח השתתפות של כולם.",https://drive.google.com/file/d/1Itr-rTGBCrIFh-ngPgWnHI0o5aT10QOr/view?usp=drive_link,https://drive.google.com/file/d/1g_dBqXdX--TOGfsCEEz54TzNvYvGoz5d/view?usp=drive_link,"<p><strong>שִׁיר סִדּוּר</strong></p>
 <p><strong>בַּיִת 1</strong></p>
 <p>זֶה הַיּוֹם עָשָׂה ד&apos;</p>
 <p>הַיּוֹם נָגִילָה</p>
@@ -29,8 +34,11 @@
 <p>אַחְזִיק תָּמִיד בְּסִדּוּרִי, עֶרְכּוֹ לִי רָב</p>
 <p>אָבִי מְאֹד אָהַבְתִּי, אֶת מִצְוָתְךָ</p>
 <p>טוֹבָה הִיא לִי מֵאַלְפֵי זָהָב</p>
-<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>"
-שיר פתיחה קצבי - בנים,שיר פתיחה קצבי,בנים,"שיר פתיחה קצבי ואנרגטי למסיבת סידור. השיר כולל מקצבים תוססים, מילים קליטות ומנגינה עשירה המתאימה לפתיחת מסיבת הסידור. השיר שיקבל בברכה את הצופות החשובות שהגיעו למסיבה ויותיר עליהם רושם חזק, עוצמתי ומרגש.",https://drive.google.com/file/d/1UyQdzSdZL1khtnKIOu1Z30LtjZW3BknG/view?usp=drive_link,,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>&nbsp;<strong>שיר פתיחה</strong></p>
+<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>","בנים,מסיבת סידור,שיר סידור קצבי"
+נשירה מזמור בנים ,"שיר פתיחה קצבי ואנרגטי למסיבת סידור! <br>
+השיר כולל מקצבים תוססים, מילים קליטות ומנגינה עשירה, <br>
+ המתאימה לפתיחה החגיגית והנרגשת של מסיבת הסידור. <br>
+ השיר שיקבל בברכה את הצופות החשובות שהגיעו למסיבה ויותיר עליהן רושם חזק ועוצמתי.",https://drive.google.com/file/d/1UyQdzSdZL1khtnKIOu1Z30LtjZW3BknG/view?usp=drive_link,https://drive.google.com/file/d/1SCjnf3cdWvmpNFxRbeb4PZvE_2AmyxYW/view?usp=drive_link,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>&nbsp;<strong>שיר פתיחה</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>בַּיִת 1</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>זֶה הוּא לָנוּ, יוֹם מָלֵא בָּאוֹר</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>יוֹם בּוֹ נְשִׁירָה מִזְמוֹר</p>
@@ -57,8 +65,11 @@
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>לִבֵּנוּ הָכֵן לִתְפִלָּה, לַעֲבוֹדָתְךָ</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>לִבִּי וּבְשָׂרִי, אוֹי, יְרַנֵּנוּ</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>בְּשִׁיר וּבְתוֹדָה לְךָ, ד&apos; אֱלֹוקֵינוּ</p>
-<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>"
-שיר פתיחה קצבי - בנות,שיר פתיחה קצבי,בנות,"שיר פתיחה קצבי ואנרגטי למסיבת סידור. השיר כולל מקצבים תוססים, מילים קליטות ומנגינה עשירה המתאימה לפתיחת מסיבת הסידור. השיר שיקבל בברכה את הצופות החשובות שהגיעו למסיבה ויותיר עליהם רושם חזק, עוצמתי ומרגש.",https://drive.google.com/file/d/13LEaLet-Os5jfihxa2-IVJ9Us9bc7ZHj/view?usp=drive_link,,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>&nbsp;<strong>שִׁיר פְּתִיחָה</strong></p>
+<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>","בנים,מסיבת סידור,פתיחה"
+נשירה מזמור בנות ,"שיר פתיחה קצבי ואנרגטי למסיבת סידור! <br>
+השיר כולל מקצבים תוססים, מילים קליטות ומנגינה עשירה, <br>
+ המתאימה לפתיחה החגיגית והנרגשת של מסיבת הסידור. <br>
+ השיר שיקבל בברכה את הצופות החשובות שהגיעו למסיבה ויותיר עליהן רושם חזק ועוצמתי.",https://drive.google.com/file/d/13LEaLet-Os5jfihxa2-IVJ9Us9bc7ZHj/view?usp=drive_link,https://drive.google.com/file/d/1En_zZPa7iTOsBjCK1Z8YnTtOUzNJyFpw/view?usp=drive_link,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>&nbsp;<strong>שִׁיר פְּתִיחָה</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>&nbsp;</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>בַּיִת 1</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>זֶה הוּא לָנוּ, יוֹם מָלֵא בְּאוֹר</p>
@@ -86,8 +97,11 @@
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>לִבֵּנוּ הָכֵן לִתְפִלָּה, לַעֲבוֹדָתְךָ</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>לִבִּי וּבְשָׂרִי, אוֹי, יְרַנְּנוּ</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>בְּשִׁיר וּבְתוֹדָה לְךָ, ד&apos; אֱלֹוקֵינוּ</p>
-<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>"
-שיר סידור קצבי - בנות,שיר סידור קצבי,בנות,"שיר סידור קצבי למסיבת הסידור שלכם! השיר כולל מקצבים אנרגטיים, מילים קליטות וקצב תוסס. השיר מוצלח ביותר ואידיאלי ליצירת אווירה חגיגית, שמחה נרגשת ומבטיח השתתפות של כולם.",https://drive.google.com/file/d/128BTVBAfSKtO7OukUhhwQwOIbY4GOdQ9/view?usp=drive_link,,"<p><strong>שִׁיר סִדּוּר</strong></p>
+<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>","בנות,מסיבת סידור,פתיחה"
+נגילה בנות ,"שיר סידור קצבי למסיבת הסידור שלך! <br>
+השיר כולל מקצבים אנרגטיים, מילים קליטות וקצב תוסס. <br>
+השיר מוצלח מאד ביצירת אווירה חגיגית, שמחה ונרגשת! <br>
+עם קצב כזה, אף ילדה לא תישאר מאחור!",https://drive.google.com/file/d/128BTVBAfSKtO7OukUhhwQwOIbY4GOdQ9/view?usp=drive_link,https://drive.google.com/file/d/1WyGfwDBXsfbqwVv9AY_kQ4jCUjvaLWjd/view?usp=drive_link,"<p><strong>שִׁיר סִדּוּר</strong></p>
 <p><strong>בַּיִת 1</strong></p>
 <p>זֶה הַיּוֹם עָשָׂה ד&apos;</p>
 <p>הַיּוֹם נָגִילָה</p>
@@ -119,8 +133,12 @@
 <p>טוֹבָה הִיא לִי מֵאַלְפֵי זָהָב</p>
 <p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, &quot;;""></p>
 <p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>
-<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>"
-שיר מרגש לאמא - בנות,שיר מרגש לאמא,בנות,"שיר מרגש ביותר לאמא, הכולל מנגינה נוגעת ללב. שיר זה מתאר בצורה יפהפייה את מסירותה הבלתי מעורערת של האם ואת אהבתה האינסופית לילדה. בשיר זה מבוטאת הכרת תודה עמוקה על תמיכתה, הדרכתה ומסירותה האינסופית. בשיר הילדה מבטיחה להוקיר ולשמר את המסורת שהונחלה לה באהבה ומבטיחה שהמורשת של בית ההורים תועבר גם לדורות הבאים. ",https://github.com/Efrat-Cohen/PandoLogic-test/blob/master/%D7%A9%D7%99%D7%A8%20%D7%9E%D7%A8%D7%92%D7%A9%20%D7%9C%D7%90%D7%9E%D7%90%20%D7%96%D7%9B%D7%95%D7%99%D7%95%D7%AA%20%D7%9E%D7%94%D7%99%D7%A8%200548478290%20(2).mp3,,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>שִׁיר לְאִמָּא</strong></p>
+<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>","מסיבת סידור,בנות,שיר סידור קצבי"
+לא אספיק להודות  ,"שיר מרגש ביותר לאמא, הכולל מנגינה חדשה ונוגעת ללב. <br>
+שיר זה מתאר בצורה מרגשת <br>
+את מסירותה הבלתי מעורערת של אמא ואת אהבתה האינסופית לילדיה. <br>
+ בשיר זה מבוטאת הכרת תודה עמוקה לאמא, <br>
+על תמיכתה, הדרכתה ומסירותה האינסופית.",https://drive.google.com/file/d/1AqlI-ZZz5qS9EL98Tux85QrPEja55FKZ/view?usp=drive_link,https://drive.google.com/file/d/18dyQxU8hkKV9TnnSHleoUjBUzPV6dD_1/view?usp=drive_link,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>שִׁיר לְאִמָּא</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><br></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>&nbsp;<strong>בַּיִת 1:</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>יָמִים, לְלֹא שֵׁנָה לְעֵינַיִךְ</p>
@@ -153,8 +171,12 @@
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>לְמַעֲבָר:</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>אֵיךְ אַסְפִּיק אִמָּא לוֹמַר לָךְ תּוֹדָה עַל הַכֹּל?</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>וְאֵיךְ אוּכַל לְתָאֵר אֶת לִבֵּךְ הַגָּדוֹל?</p>
-<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>"
-שיר סידור שקט - בנות,שיר סידור שקט,בנות,"שיר סידור שקט, מרגש ונוגע למסיבת סידור. לשיר מנגינה שקטה ומרעידה, הרמוניות עדינות ומילים נוגעות ללב. הוא יוצר אווירה שלווה, מעודד התבוננות פנימית וחיבור של הילדות הטהורות לסידור ולמילות התפילה. ",https://drive.google.com/file/d/1DAb-D64y85MivVY1UxevMZzR1bDEX8Z7/view?usp=drive_link,,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>שִׁיר סִדּוּר</strong></p>
+<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>","מסיבת סידור,שיר לאמא,בנות"
+יום גדול,"שיר סידור שקט, מרגש ונוגע למסיבת סידור. <br>
+לשיר מנגינה שקטה ומרעידה, <br>
+ הרמוניות עדינות ומילים נוגעות ללב. <br>
+השיר יוצר אווירה שלווה, <br>
+מעודד התבוננות פנימית וחיבור של הילדות הטהורות לסידור ולמילות התפילה.",https://drive.google.com/file/d/1DAb-D64y85MivVY1UxevMZzR1bDEX8Z7/view?usp=drive_link,https://drive.google.com/file/d/1JF6L8HZXp1hnaWn5MKLeGrPa50xCgd7Z/view?usp=drive_link,"<p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>שִׁיר סִדּוּר</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'><strong>בַּיִת 1:</strong></p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>בְּיוֹם גָּדוֹל אֲנִי פֹּה נִצֶּבֶת</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>סִדּוּר בְּיָדִי אוֹתוֹ אֲנִי אוֹהֶבֶת</p>
@@ -185,4 +207,26 @@
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>כֹּה אָהַבְתִּי הַתְּפִלּוֹת, הַתְּהִלִּים&nbsp;</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>עִם סִדּוּרִי שֶׁלִּי יָגֵל לִבִּי, אוֹי, מְאֹד</p>
 <p style='text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: -apple-system, system-ui, BlinkMacSystemFont, ""'>רוֹצָה אֲנִי לְהִתְפַּלֵּל אֵלֶיךָ עוֹד וָעוֹד.</p>
-<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>"
+<p><br style=""text-align: left;color: rgb(29, 31, 37);background-color: rgb(255, 255, 255);font-size: 13px;font-family: 'Arial Black', Gadget, sans-serif;""></p>","מסיבת סידור,שיר סידור שקט,בנות"
+בזמר ושיר ,"חדש!!! <br>
+שיר קצבי המקדם בברכה את הצופות החשובות שהגיעו למסיבת הסידור. <br>
+השיר מלווה בקצב ובמנגינה סוחפת, <br>
+המעוררת שמחה והבנה של הזכות לקבל את סידור התפילה. <br>
+השיר אידיאלי ביותר לפתיחה מוצלחת של המסיבה<br>
+ולהכנסת הצופות כולן אל תוך האווירה החגיגית של קבלת הסידור. <br>",https://drive.google.com/file/d/1sJEH7o-HCmP8FlXgcpYLEiQVeEuaCK5u/view?usp=drive_link,https://drive.google.com/file/d/1D4BmTvTyc6dnEhSlURX8BXxf1SF6K17j/view?usp=drive_link,,"מסיבת סידור,פתיחה,בנות"
+בת מלכות,"חדש!!! <br>
+שיר סידור מרגש הנוגע במעמקי הנפש<br>
+ומעורר את הילדות הטהורות להתפלל<br>
+ולהתחבר על ידי מילות התפילה אל אבא שבשמיים. <br>
+,השיר  מחדיר בילדות את ההבנה בגודל הזכות להיות בנות מלכות, <br>
+שיכולות לדבר תדיר עם אביהן בכל עת שתחפוצנה. <br>",https://drive.google.com/file/d/1T5HlB_Ra5hzt_foOxooM_tnV10HogtUT/view?usp=drive_link,https://drive.google.com/file/d/1jiOIvffJ9IkyjpDs2XasW8_QYEd_87nP/view?usp=drive_link,,"מסיבת סידור,שיר סידור שקט,בנות"
+נשירה מזמור- בנות בנים,"שיר פתיחה קצבי ואנרגטי למסיבת סידור! <br>
+השיר כולל מקצבים תוססים, מילים קליטות ומנגינה עשירה, <br>
+ המתאימה לפתיחה החגיגית והנרגשת של מסיבת הסידור. <br>
+השיר מתאים למסיבה משותפת לילדים ולילדות כמו גם לקהל של אבות .ואימהות<br>
+ זה השיר שיקבל בברכה את הצופים/ות החשובים/ות שהגיעו למסיבה ויותיר עליהן/ם רושם חזק ועוצמתי.",https://drive.google.com/file/d/11Kvwu1dQfZVuJXTMj2gTn4956iWj_dHf/view?usp=drive_link,https://drive.google.com/file/d/1esy_5uyRXGAMwbtk9F88I7JD5-1X5Cag/view?usp=drive_link,,"בנות בנים,פתיחה,מסיבת סידור"
+אדבר איתך,,,,,"מסיבת סידור,בנות,שיר סידור שקט"
+שיר למלך,,,,,"מסיבת סידור,בנות,פתיחה"
+שומע תפילתי,,,,,"מסיבת סידור,בנות,שיר סידור שקט"
+לך הנני,,,,,"בת מצווה,בנות,שיר בת מצווה"
+בואו שעריו,,,,,"פתיחה,שיר בת מצווה,בנות"
